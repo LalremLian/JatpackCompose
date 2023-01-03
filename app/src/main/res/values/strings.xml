@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Jatpack Compose</string>
+    <string name="title">Little Lemon</string>
+    <string name="chicago">Chicago</string>
+    <string name="order">Order Take Away</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="description">Navigate to the File Settings option you will get to see below dialog screen. Inside this screen, you will get to see your SDK path.</string>
+    <string name="title_activity_upper_panel">UpperPanel</string>
+    <string name="title_activity_state_management">StateManagementActivity</string>
+    <string name="title_activity_top_app_bar">TopAppBar</string>
+</resources>
