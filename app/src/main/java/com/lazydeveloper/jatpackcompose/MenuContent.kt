@@ -1,4 +1,15 @@
+/*
 package com.lazydeveloper.jatpackcompose
+
+import android.content.res.Configuration.ORIENTATION_LANDSCAPE
+import android.view.Surface
+import androidx.compose.Composable
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.unit.dp
+import androidx.ui.input.KeyboardType
 
 @Composable
 fun MenuContent(paddingValues: PaddingValues) {
@@ -9,7 +20,7 @@ fun MenuContent(paddingValues: PaddingValues) {
             ORIENTATION_LANDSCAPE -> {
                 Column {
                     Row(modifier = Modifier.weight(0.5f)) {
-                        Text(
+                        KeyboardType.Text(
                             "Appetizers",
                             modifier = Modifier
                                 .weight(0.25f)
@@ -82,4 +93,4 @@ fun MenuContent(paddingValues: PaddingValues) {
             }
         }
     }
-}
+}*/
