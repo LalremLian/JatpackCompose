@@ -1,6 +1,6 @@
 package com.lazydeveloper.jatpackcompose.jetpackNavigation
 
-import androidx.compose.Composable
+import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize

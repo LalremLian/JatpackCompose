@@ -1,4 +1,4 @@
-package com.lazydeveloper.jatpackcompose
+package com.lazydeveloper.jatpackcompose.littleLemon
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.lazydeveloper.jatpackcompose.R
 import com.lazydeveloper.jatpackcompose.ui.theme.JatpackComposeTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -25,11 +26,13 @@ fun TopAppBar(scaffoldState: ScaffoldState? = null, scope: CoroutineScope? = nul
         IconButton(onClick = {
             scope?.launch { scaffoldState?.drawerState?.open() }
         }) {
-            Image(painter = painterResource(id = R.drawable.ic_menu),
+            Image(painter = painterResource(id = R.drawable.ic_ham_menu),
                 contentDescription = "Drawer Menu")
         }
+
         Text(text = "Dashboard",
         Modifier.padding(top = 15.dp))
+
         IconButton(onClick = { }) {
             Image(painter = painterResource(id = R.drawable.ic_cart),
                 contentDescription = "Cart")
