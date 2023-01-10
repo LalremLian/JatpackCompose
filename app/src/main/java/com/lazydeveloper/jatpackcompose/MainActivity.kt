@@ -3,12 +3,11 @@ package com.lazydeveloper.jatpackcompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -37,6 +36,8 @@ class MainActivity : ComponentActivity() {
 
             HomeScreenLittleLemon()
 
+            //-------AnimatedButton
+//            Dummy()
 //            BottomSheetScaffold()
 
 /*            val materialBlue700 = Color(0xFF1976D2)
@@ -63,6 +64,22 @@ class MainActivity : ComponentActivity() {
     }
 
 
+}
+
+@Composable
+fun Dummy(){
+    var visible by remember{
+        mutableStateOf(true)
+    }
+    Column() {
+        AnimatedVisibility(visible = visible) {
+            Text(text = "Hello")
+        }
+        Button(onClick = { visible = !visible}) {
+            Text(text = "Button")
+        }
+
+    }
 }
 
 /*@Composable
@@ -151,7 +168,9 @@ fun MyBottomNavigation(navController: NavController) {
 
         destinationList.forEachIndexed { index, destination ->
             BottomNavigationItem(
-                modifier = Modifier.background(LittleLemonColor.cloud).offset(y = 5.dp),
+                modifier = Modifier
+                    .background(LittleLemonColor.cloud)
+                    .offset(y = 5.dp),
 
                 label = { Text(text = destination.title, fontSize = 10.sp) },
 
